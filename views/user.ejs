@@ -1,0 +1,72 @@
+<!-- views/users.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+     font-size: 3vw;
+    }
+    
+    h2 {
+     
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      
+    }
+    .div{
+     
+      display: flex;
+      line-height: 1vw;
+      align-items: center;
+      justify-content: space-between;
+      width: 600px;
+      flex-direction: row;
+      background-color: rgb(137, 222, 237);
+      padding:  1vw 5vw 0vw 5vw;
+      gap: 20px;
+      text-transform: capitalize;
+      font-size: 1.8vw;
+      border-bottom: 1px solid black;
+      font-weight: 800;
+    }
+    .rollNo{
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>User List</h1> 
+  <ul>
+    <% usersss.forEach(item => { %>
+      <div class="div">
+        <li><%= item.name %></li>
+        <li class="rollNo"><%= item.roll %></li>
+
+      </div>
+      
+       <!-- Replace 'name' with your actual field names -->
+    <% }); %>
+  </ul>
+    
+    
+
+</body>
+</html>
